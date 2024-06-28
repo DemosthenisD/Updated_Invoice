@@ -200,7 +200,7 @@ def main():
         with col1:
             client = st.selectbox("Select Client",clients)
              # DD_28062024: Added next row
-            Client_Name_For_Invoice = df_project_list[df_project_list['Client'] == client]['Client Name (for Invoices)'].unique()
+            Client_Name_For_Invoice = df_project_list[df_project_list['Client'] == client]['Client Name (for Invoices)'].unique()[0]
         with col2:
             filtered_address = df_client_list[df_client_list['Client'] == client]['Address'].unique() 
             address = st_free_text_select(label="Address", 
