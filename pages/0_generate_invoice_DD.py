@@ -226,7 +226,7 @@ def main():
             year = date.year
         with col3:            # DD_28062024: previously--> with col2
             amount = st.number_input("Amount")
-            amount = f'{amount:,}'
+             
         with col1:            # DD_28062024: New addition
             Pre_invoice_no = len(df_Invoice_List[df_Invoice_List['Year'] == year]) +1
             #invoice_no= year &"/"& st.text_input(label="invoice No", value=Pre_invoice_no) # DD_28062024: previously--> _invoice_no = len(st.session_state.invoices) + 1
@@ -360,7 +360,7 @@ def main():
                     '{{placeholder5}}': f"{year}-{invoice_no}",
                     #'{{placeholder6}}': year,  # DD_28062024 REMOVED THIS since invoice_no now inlcudes year
                     '{{placeholder7}}': description,
-                    '{{placeholder8}}': amount,
+                    '{{placeholder8}}': f"{amount:,}", # DD_28062024
                     '{{placeholder8_Exp}}': Expenses_Net_Amount,
                     '{{placeholder8_Tot}}': amount+Expenses_Net_Amount,
                     '{{placeholder9}}': vat_value,
