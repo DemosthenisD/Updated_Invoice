@@ -360,13 +360,13 @@ def main():
                     '{{placeholder5}}': f"{year}-{invoice_no}",
                     #'{{placeholder6}}': year,  # DD_28062024 REMOVED THIS since invoice_no now inlcudes year
                     '{{placeholder7}}': description,
-                    '{{placeholder8}}': f"{amount:,}", # DD_28062024
-                    '{{placeholder8_Exp}}': f"{Expenses_Net_Amount:,}",
-                    '{{placeholder8_Tot}}': f"{amount+Expenses_Net_Amount:,}",
-                    '{{placeholder9}}': f"{vat_value:,}",
-                    '{{placeholder9_Exp}}': f"{Expenses_VAT_Amount:,}",
-                    '{{placeholder9_Tot}}': f"{vat_value + Expenses_VAT_Amount:,}",
-                    '{{placeholder10}}':f"{total_invoice:,}",
+                    '{{placeholder8}}': f"{amount:,.2f}", # DD_28062024
+                    '{{placeholder8_Exp}}': f"{Expenses_Net_Amount:,.2f}",
+                    '{{placeholder8_Tot}}': f"{amount+Expenses_Net_Amount:,.2f}",
+                    '{{placeholder9}}': f"{vat_value:,.2f}",
+                    '{{placeholder9_Exp}}': f"{Expenses_VAT_Amount:,.2f}",
+                    '{{placeholder9_Tot}}': f"{vat_value + Expenses_VAT_Amount:,.2f}",
+                    '{{placeholder10}}':f"{total_invoice:,.2f}",
                     # Add more placeholders as needed
                 }
 
