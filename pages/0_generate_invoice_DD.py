@@ -276,7 +276,10 @@ def main():
                 format_option = st.radio("Select download format", ["DOCX", "PDF"],  key="format_option")
 
 
-        if amount > 0 then VAT_Amount = (amount * vat)/100
+        if amount > 0 
+            VAT_Amount = (amount * vat)/100
+        else
+            VAT_Amount = 0
         Expenses_Net_Amount = 0
         Expenses_VAT_Amount = 0 #(Expenses_Net_Amount*vat)/100
         
