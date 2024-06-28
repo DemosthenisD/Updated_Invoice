@@ -267,9 +267,9 @@ def main():
                 Filtered_Invoice_Template = (df_project_list[df_project_list['Client'] == client]['Invoice Template'].unique()) # DD_28062024: previously-->  options_for_templates = (df_project_list[df_project_list['Client'] == client]['Invoice Template'].unique())
                 # DD_28062024: ADDED NEXT 2 ROWS
                 options_for_templates =df_project_list['Invoice Template'].unique()
-                index_Selected = options_for_templates.index(Filtered_Invoice_Template)
+                #index_Selected = options_for_templates.index(Filtered_Invoice_Template)
                 # DD_28062024: added index in st.radio below
-                invoice_template = st.radio("Select Template for Invoice", options_for_templates, index(index_Selected), key="invoice_template")
+                invoice_template = st.radio("Select Template for Invoice", options_for_templates, index(int(Filtered_Invoice_Template[-1])-1), key="invoice_template")
             with col2:
                 # Select download format
                 format_option = st.radio("Select download format", ["DOCX", "PDF"],  key="format_option")
