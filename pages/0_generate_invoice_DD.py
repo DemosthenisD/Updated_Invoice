@@ -240,7 +240,7 @@ def main():
         #                            disabled=False,
         #                            delay=300,)
         #vat=convert_to_number(vat)
-        vat = st.number_input("VAT %", value = filtered_vat)
+        vat = st.number_input("VAT %", filtered_vat[0])
         
         filtered_client_code = df_project_list[df_project_list['Client'] == client]['client_code'].unique()
 
